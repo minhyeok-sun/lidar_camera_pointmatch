@@ -4,3 +4,4 @@ livox lidar 와 zed2 camera를 활용하여 주변 장애물을 인식하는 프
 livox lidar는 기존 velodyne lidar와 다르게 fov 90 로 좁지만 그 영역만큼은 64channel의 라이더보다 해상도가 뛰어나다. 따라서 5대의 livox lidar을 calibration을 통해 360도의 dense한 pointcloud 수집이 가능하다.
 pointcloud는 pcl-ros library을 활용하여 처리하였다.
 
+
