@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <group ns="point_process">
+    <node name="livox_merge_first" pkg="kaai3_project"  type="livox_merge_first" respawn="true" />
+    <node name="livox_merge_final" pkg="kaai3_project"  type="livox_merge_final" respawn="true" />
+    <node name="livox_plane" pkg="kaai3_project"  type="livox_plane" respawn="true" />
+    <node name="merge" pkg="kaai3_project"  type="merge" respawn="true" />
+    <node name="filter" pkg="kaai3_project"  type="filter" respawn="true" />
+    <node name="boxing" pkg="kaai3_project"  type="boxing" respawn="true" />
+  </group>
+
+
+</launch>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <group ns="point_match">
+    <node name="lidar_to_point" pkg="kaai3_project"  type="lidar_to_point.py" respawn="true" />
+    <node name="obj_tracking" pkg="kaai3_project" type="obj_tracking.py" respawn="true" />
+    <node name="yolo_to_point" pkg="kaai3_project" type="yolo_to_point.py" respawn="true" />
+    <node name="yolo_lidar_merge" pkg="kaai3_project" type="yolo_lidar_merge.py" respawn="true" />
+    <node name="matched_boxing" pkg="kaai3_project" type="matched_boxing.py" respawn="true" />
+  </group>
+  <include file="$(find darknet_ros)/launch/darknet_ros.launch"/>
+
+  <group>
+		<node name="rviz" pkg="rviz" type="rviz" respawn="false"
+				args="-d $(find kaai3_project)/config/display_lidar_points.rviz"/>
+  </group>
+
+</launch>

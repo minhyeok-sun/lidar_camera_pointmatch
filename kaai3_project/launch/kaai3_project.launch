@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <include file="$(find kaai3_project)/launch/pointcloud_process.launch"/>
+  <include file="$(find kaai3_project)/launch/point_match.launch"/>
+</launch>
